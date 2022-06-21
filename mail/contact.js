@@ -15,8 +15,10 @@ $(function () {
             $this.prop("disabled", true);
 
             $.ajax({
-                url: "contact.php",
+                url: "https://script.google.com/macros/s/AKfycbwlNXLAcdohVnRBgm5iBFMbFbu6jjTDA0Cmwg-K-WwMAuEp-TFRUlEXFs4VICay67-9/exec",
                 type: "POST",
+				dataType: "json",
+				crossDomain: true,
                 data: {
                     name: name,
                     email: email,
@@ -29,7 +31,7 @@ $(function () {
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                             .append("</button>");
                     $('#success > .alert-success')
-                            .append("<strong>Your message has been sent. </strong>");
+                            .append("<strong>Your message has been sent. Thanks for being awesome, " + name + "! </strong>");
                     $('#success > .alert-success')
                             .append('</div>');
                     $('#contactForm').trigger("reset");
